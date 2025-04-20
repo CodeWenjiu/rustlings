@@ -1,6 +1,7 @@
 // TODO: Fix the compiler error in this function.
+// 为什么可以这样做？因为vec本质是存在堆上的，传给函数的是一个指针，如果传递的是数组则另当别论
 fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
-    let vec = vec;
+    let mut vec = vec;
 
     vec.push(88);
 

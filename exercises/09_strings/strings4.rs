@@ -1,5 +1,9 @@
 // Calls of this function should be replaced with calls of `string_slice` or `string`.
-fn placeholder() {}
+fn placeholder<T: AsRef<str>>(arg: T) {
+    // We can call string_slice since AsRef<str> guarantees
+    // we can get a &str using .as_ref()
+    string_slice(arg.as_ref());
+}
 
 fn string_slice(arg: &str) {
     println!("{arg}");

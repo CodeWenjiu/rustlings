@@ -25,7 +25,7 @@ fn main() {
 
     placeholder("rust is fun!".to_owned());
 
-    placeholder("nice weather".into());
+    string_slice("nice weather".into());
 
     placeholder(format!("Interpolation {}", "Station"));
 
